@@ -1,3 +1,152 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+:root {
+    --smokyClr: #64748b;
+    --zinkClr300: #d4d4d8;
+    --zinkClr100: #f4f4f5;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: var(--smokyClr);
+    grid-row: 1 / 3;
+}
+
+
+
+span {
+    color: brown;
+}
+
+button {
+    width: 50px;
+}
+
+.avatarBig, .avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background-image: url('/images/icons/pngegg.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+}
+
+/* Main */
+
+main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+
+/* Header */
+
+header {
+    color: blueviolet;
+    background-color: var(--zinkClr100);
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.headerTop {
+    display: grid;    
+    grid-template-columns: 5fr 1fr; 
+    justify-items: center;
+    align-items: center;
+
+
+}
+
+.headerRight {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.searchInput {
+    display: flex;
+    flex: auto;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+input {
+    width: 90%;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.headerDown {
+    display: grid;
+    grid-column: 2fr 10fr repeat(3, 3fr);
+    grid-row: 1fr 1fr;
+    grid-template-areas: 
+    "avatar smallP . . . . BtnNew BtnUpload BtnShare"
+    "avatar bigP . . . . BtnNew BtnUpload BtnShare";
+
+    place-items: center;
+
+}
+
+.avatarBig {
+    grid-area: avatar;
+    
+    min-height: 90%;
+    min-width: 90%;
+
+}
+
+.headerSmallPara {
+    grid-area: smallP;
+    justify-self: start;
+    /* position: relative;
+    top: 15px; */
+}
+
+.headerBigPara {
+    grid-area: bigP;
+    justify-self: start;
+/*     position: relative;
+    bottom: 30px; */
+    
+}
+
+.buttonNew {
+    grid-area: BtnNew;
+}
+
+.buttonUpload {
+    grid-area: BtnUpload;
+}
+
+.buttonShare {
+    grid-area: BtnShare;
+}
+ 
+/* Section */
+section {
+    grid-row: 2 / 3;
+}
+
+
+
