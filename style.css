@@ -246,7 +246,77 @@ input {
  
 /* Section */
 section {
+    z-index: -1;
+    background-color: rgb(226,232,240);
     grid-row: 2 / 3;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.projects {
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.card p:first-child {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.projectImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    height: 80px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+.leftSection {
+    display: grid;
+    grid-template-rows: 2em max-content;
+    gap: 20px;
+}
+
+.leftSection .projectsTitle, .annTitle, .trendTitle {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: orchid;
+    
+}
+
+.rightSection {
+    background-color: brown;
+    display: grid;
+    grid-template-rows: 36px 1fr 20px 36px 1fr;
+    gap: 20px;
+}
+
+.announcements {
+    background-color: dodgerblue;
+    padding: 20px;
+    width: 100%;
+}
+
+.trending {
+    background-color: lawngreen;
+    padding: 20px;
+    width: 100%;
 }
 
 
